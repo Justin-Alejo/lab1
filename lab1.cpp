@@ -1,4 +1,4 @@
-//modified by:
+//modified by: Justin Alejo
 //date:
 //
 //author: Gordon Griesel
@@ -271,6 +271,15 @@ void render()
 	glPushMatrix();
     glColor3f(0.0, 1.0, 0.0);
 	//glColor3ub(150, 160, 220);
+        if(g.xres >= 400 && g.xres < 800){
+            glColor3f(0,0,1.0);
+        }
+        else if(g.xres >= 800){
+            glColor3f(0,1.0,0);
+        }
+        else{
+            glColor3f(1.0,0,0);
+        }
 	glTranslatef(g.pos[0], g.pos[1], 0.0f);
 	glBegin(GL_QUADS);
 		glVertex2f(-g.w, -g.w);
